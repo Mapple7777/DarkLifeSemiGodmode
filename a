@@ -1,0 +1,13 @@
+-- // Services
+local Players = game:GetService('Players')
+local RunService = game:GetService('RunService')
+
+-- // Player 
+local LocalPlayer = Players.LocalPlayer
+local Character = LocalPlayer.Character
+local Hitbox = Character:FindFirstChild('Hitbox')
+
+-- // Main
+RunService.RenderStepped:Connect(function()
+    Hitbox:Destroy()
+end)
